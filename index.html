@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的设计作品集 | 视觉传达设计</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">Portfolio</a>
+            <nav class="nav">
+                <a href="#hero" class="nav-link">首页</a>
+                <a href="#works" class="nav-link">作品</a>
+                <a href="#about" class="nav-link">关于我</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 首屏 Hero -->
+    <section id="hero" class="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title">你好，我是 <span class="highlight">视觉传达设计师</span></h1>
+            <p class="hero-subtitle">专注于品牌设计、IP设计与信息可视化设计</p>
+            <a href="#works" class="btn">查看我的作品</a>
+        </div>
+    </section>
+
+    <!-- 作品区 -->
+    <section id="works" class="works">
+        <div class="container">
+            <h2 class="section-title">精选作品</h2>
+            
+            <!-- 分类标签 -->
+            <div class="filter-tabs">
+                <button class="tab active" data-filter="all">全部</button>
+                <button class="tab" data-filter="brand">品牌设计</button>
+                <button class="tab" data-filter="ip">IP设计</button>
+                <button class="tab" data-filter="visual">视觉传达设计</button>
+            </div>
+
+            <!-- 作品网格（共6个） -->
+            <div class="works-grid">
+                <!-- 品牌设计 1 -->
+                <div class="work-item" data-category="brand" onclick="openModal('brand1')">
+                    <div class="work-img">
+                        <img src="./images/brand1(封面).jpg" alt="品牌视觉识别系统">
+                        <div class="work-overlay"><span>查看详情</span></div>
+                    </div>
+                    <h3 class="work-title">品牌视觉识别系统</h3>
+                    <p class="work-category">品牌设计 / 2025</p>
+                </div>
+                <!-- 品牌设计 2 -->
+                <div class="work-item" data-category="brand" onclick="openModal('brand2')">
+                    <div class="work-img">
+                        <img src="./images/brand2(封面).jpg" alt="品牌包装系列设计">
+                        <div class="work-overlay"><span>查看详情</span></div>
+                    </div>
+                    <h3 class="work-title">品牌包装系列设计</h3>
+                    <p class="work-category">品牌设计 / 2025</p>
+                </div>
+
+                <!-- IP设计 1 -->
+                <div class="work-item" data-category="ip" onclick="openModal('ip1')">
+                    <div class="work-img">
+                        <img src="./images/ip1(封面).jpg" alt="IP形象设计">
+                        <div class="work-overlay"><span>查看详情</span></div>
+                    </div>
+                    <h3 class="work-title">IP形象设计</h3>
+                    <p class="work-category">IP设计 / 2025</p>
+                </div>
+                <!-- IP设计 2 -->
+                <div class="work-item" data-category="ip" onclick="openModal('ip2')">
+                    <div class="work-img">
+                        <img src="./images/ip2(封面).jpg" alt="IP衍生品设计">
+                        <div class="work-overlay"><span>查看详情</span></div>
+                    </div>
+                    <h3 class="work-title">IP衍生品设计</h3>
+                    <p class="work-category">IP设计 / 2025</p>
+                </div>
+
+                <!-- 视觉传达设计 1（信息图表） -->
+                <div class="work-item" data-category="visual" onclick="openModal('visual1')">
+                    <div class="work-img">
+                        <img src="./images/visua1(封面).jpg" alt="信息图表设计">
+                        <div class="work-overlay"><span>查看详情</span></div>
+                    </div>
+                    <h3 class="work-title">信息图表设计</h3>
+                    <p class="work-category">视觉传达设计 / 2025</p>
+                </div>
+                <!-- 视觉传达设计 2（红包） -->
+                <div class="work-item" data-category="visual" onclick="openModal('visual2')">
+                    <div class="work-img">
+                        <img src="./images/visual2(封面).jpg" alt="红包设计">
+                        <div class="work-overlay"><span>查看详情</span></div>
+                    </div>
+                    <h3 class="work-title">红包设计</h3>
+                    <p class="work-category">视觉传达设计 / 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 弹窗（查看多张图） -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-images"></div>
+        </div>
+    </div>
+
+    <!-- 关于我 -->
+    <section id="about" class="about">
+        <div class="container about-content">
+            <div class="about-text">
+                <h2 class="section-title">关于我</h2>
+                <p>我是一名视觉传达设计专业本科生，擅长品牌视觉、IP形象与信息可视化设计。我相信好的设计不仅是视觉的美感，更是信息的高效传递。</p>
+                <p>在学习中，我不断探索设计与技术的结合，希望用创意解决实际问题。</p>
+                <div class="skills">
+                    <span class="skill-tag">Photoshop</span>
+                    <span class="skill-tag">Illustrator</span>
+                    <span class="skill-tag">After Effects</span>
+                    <span class="skill-tag">UI/UX</span>
+                </div>
+            </div>
+            <div class="about-img">
+                <img src="./images/my-photo.jpg" alt="我的照片">
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 我的设计作品集 | 视觉传达设计专业</p>
+        </div>
+    </footer>
+
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // 作品筛选
+        const tabs = document.querySelectorAll('.tab');
+        const works = document.querySelectorAll('.work-item');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const filter = tab.dataset.filter;
+                works.forEach(work => {
+                    if (filter === 'all' || work.dataset.category === filter) {
+                        work.style.display = 'block';
+                        work.style.animation = 'fadeIn 0.5s ease';
+                    } else {
+                        work.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 弹窗数据（已补全IP设计1的所有图片）
+        const workImages = {
+            brand1: [
+                "./images/brand1_1.jpg",
+                "./images/brand1_2.jpg",
+                "./images/brand1_3.jpg"
+            ],
+            brand2: [
+                "./images/brand2_1.jpg",
+                "./images/brand2_2.jpg",
+                "./images/brand2_3.jpg"
+            ],
+            ip1: [
+                "./images/ip1_2.jpg",
+                "./images/ip1_3.jpg",
+                "./images/ip2.jpg"
+            ],
+            ip2: [
+                "./images/ip2_1.jpg",
+                "./images/ip2_2.jpg"
+            ],
+            visual1: [
+                "./images/visual1_1.jpg",
+                "./images/visual1_2.jpg"
+            ],
+            visual2: [
+                "./images/visual2_2.jpg",
+                "./images/visual2_3.jpg"
+            ]
+        };
+
+        // 打开弹窗
+        function openModal(workId) {
+            const modal = document.getElementById('modal');
+            const modalImages = document.getElementById('modal-images');
+            modalImages.innerHTML = '';
+            
+            workImages[workId].forEach(src => {
+                const img = document.createElement('img');
+                img.src = src;
+                modalImages.appendChild(img);
+            });
+            
+            modal.style.display = 'block';
+        }
+
+        // 关闭弹窗
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        // 点击弹窗外部关闭
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
